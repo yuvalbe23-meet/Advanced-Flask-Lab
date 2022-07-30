@@ -13,12 +13,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="avatar"><img src="{{url_for('static',filename='images/avatar.jpg')}}" alt="" /></span>
+						<span class="avatar"><img src="{{image_link}}" alt="" /></span>
 
-            <h1>Description</h1>
+            <h1>{{hehe}}</h1>
             <br>
             <!-- About me button -->
-            <a href="#"><button style="color:white;width:40%" >More about me</button></a>
+            <a href="/about"><button style="color:white;width:40%" >More about me</button></a>
             <!--  -->
             <br> <br>
 						<ul class="icons">
@@ -37,20 +37,23 @@
 							<section class="thumbnails">
                 
                 <div>
+                			{%for post in posts%}
                       <a href="">
-                        <img src="static/images/thumbs/01.jpg" alt="" />
+                        <img src="{{post}}" alt="" />
                         <h3>Caption... blah blah blah</h3>
                       </a>
-                
+                			{%endfor%}
+                			
                       <a href="">
-                        <img src="url_for('static',filename='images/thumbs/02.jpg')" alt="" />
+                        <img src="{{post}}" alt="" />
                         <h3>Caption... blah blah blah</h3>
                       </a>
+
                 </div>    
                 <div>
                   <a href="">
-                        <img src="{{url_for('static',filename='images/thumbs/03.jpg')}}" alt="" />
-                        <h3>Caption... blah blah blah</h3>
+                        <img src="{{post}}" alt="" />
+                        <h3>... blah blah blah</h3>
                       </a>
                 </div>  
 
